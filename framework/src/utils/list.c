@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:45:38 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 18:57:55 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/06 19:26:41 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ t_unit_test	*testlist_new(char *name, int (*f)(void))
 {
 	t_unit_test	*new;
 
-	if (!name ||  !f)
+	if (!name || !f)
 		return (NULL);
 	new = (t_unit_test *)malloc(sizeof(t_unit_test));
 	if (!new)

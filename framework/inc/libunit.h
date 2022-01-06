@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 18:59:39 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/06 19:12:37 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,8 @@ ssize_t		ft_ps(char *str);
 ssize_t		ft_psc(char *str, char *color);
 ssize_t		ft_pser(char *str);
 ssize_t		ft_pserc(char *str, char *color);
+ssize_t		ft_pn(int nbr);
+ssize_t		ft_pnc(int nbr, char *color);
+ssize_t		ft_pnerc(int nbr, char *color);
 
 #endif
