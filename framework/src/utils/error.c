@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_basic_test.c                                    :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 18:25:53 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 18:23:12 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/06 18:30:18 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/strlen_tests.h"
+#include "../../inc/libunit.h"
 
-int	basic_test(void)
+void	error(t_unit_test **testlist, char *text)
 {
-	if (ft_strlen("Hello") == 5)
-		return (RET_OK);
-	else
-		return (RET_KO);
+	free_testlist(testlist);
+	ft_pserc("Error: ", RED);
+	ft_pserc(text, C_RED);
+	exit(RET_KO);
 }
