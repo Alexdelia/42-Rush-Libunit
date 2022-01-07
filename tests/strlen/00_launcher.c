@@ -6,19 +6,20 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:35:41 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 21:09:07 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/tests.h"
+
+#define NAME	"STRLEN"
 
 int	strlen_launcher(void)
 {
 	t_unit_test	*testlist;
 
 	testlist = NULL;
-	print_test_header("ft_strlen");
-	load_test(&testlist, "Basic", &basic_test);
+	load_test(&testlist, NAME, "Basic", &basic_test);
 	// other tests
 	return (launch_tests(&testlist));
 }

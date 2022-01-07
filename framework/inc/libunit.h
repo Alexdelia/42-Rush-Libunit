@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:29:14 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 21:07:10 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,13 @@
 typedef struct s_unit_test
 {
 	char				*name;
+	char				*f_name;
 	int					(*f)(void);
 	struct s_unit_test	*next;
 }						t_unit_test;
 
-void		load_test(t_unit_test **testlist, char *name, int (*f)(void));
+void		load_test(t_unit_test **testlist, char *name,
+				char *f_name, int (*f)(void));
 int			launch_tests(t_unit_test **testlist);
 void		catch_process(t_unit_test *test,
 				unsigned int *ok, unsigned int *ko);
@@ -40,11 +42,11 @@ void		catch_process(t_unit_test *test,
 void		error(t_unit_test **testlist, char *text);
 
 void		print_header(void);
-void		print_test_header(char *name);
-void		print_test_status(char *name, char *result, char *color);
+void		print_test_status(const char *f, const char *name,
+				const char *result, const char *color);
 int			print_tests_result(const unsigned int ok, const unsigned int ko);
 
-t_unit_test	*testlist_new(char *name, int (*f)(void));
+t_unit_test	*testlist_new(char *name, char *f_name, int (*f)(void));
 void		testlist_addback(t_unit_test **alst, t_unit_test *n);
 void		free_testlist(t_unit_test **testlist);
 
@@ -52,12 +54,12 @@ size_t		u_strlen(const char *str);
 int			ft_abs(int n);
 void		ft_bzero(void *s, size_t n);
 
-ssize_t		ft_ps(char *str);
-ssize_t		ft_psc(char *str, char *color);
-ssize_t		ft_pser(char *str);
-ssize_t		ft_pserc(char *str, char *color);
+ssize_t		ft_ps(const char *str);
+ssize_t		ft_psc(const char *str, const char *color);
+ssize_t		ft_pser(const char *str);
+ssize_t		ft_pserc(const char *str, const char *color);
 ssize_t		ft_pn(int nbr);
-ssize_t		ft_pnc(int nbr, char *color);
-ssize_t		ft_pnerc(int nbr, char *color);
+ssize_t		ft_pnc(int nbr, const char *color);
+ssize_t		ft_pnerc(int nbr, const char *color);
 
 #endif

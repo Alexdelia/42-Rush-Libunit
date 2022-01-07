@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:45:38 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:41:29 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 21:06:07 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	testlist_addback(t_unit_test **alst, t_unit_test *n)
 	}
 }
 
-t_unit_test	*testlist_new(char *name, int (*f)(void))
+t_unit_test	*testlist_new(char *name, char *f_name, int (*f)(void))
 {
 	t_unit_test	*new;
 
@@ -49,6 +49,7 @@ t_unit_test	*testlist_new(char *name, int (*f)(void))
 	if (!new)
 		return (NULL);
 	new->name = name;
+	new->f_name = f_name;
 	new->f = f;
 	new->next = NULL;
 	return (new);
