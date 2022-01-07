@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:45:38 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 19:26:41 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:05:30 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static t_unit_test	*testlist_last(t_unit_test *lst)
 	return (lst);
 }
 
-void	testlist_addback(t_unit_test **alst, t_unit_test *new)
+void	testlist_addback(t_unit_test **alst, t_unit_test *n)
 {
 	t_unit_test	*last;
 
@@ -32,10 +32,10 @@ void	testlist_addback(t_unit_test **alst, t_unit_test *new)
 		if (*alst)
 		{
 			last = testlist_last(*alst);
-			last->next = new;
+			last->next = n;
 		}
 		else
-			*alst = new;
+			*alst = n;
 	}
 }
 

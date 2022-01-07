@@ -6,12 +6,11 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 14:42:11 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:20:10 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
-#include "../inc/strlen_tests.h" // list of function to test
+#include "../inc/tests.h"
 
 int	strlen_launcher(void)
 {

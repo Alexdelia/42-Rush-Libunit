@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen_tests.h                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:12:07 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/07 15:07:43 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/07 15:12:20 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRLEN_TESTS_H
-# define STRLEN_TESTS_H
+#include "../inc/tests.h"
 
-# include <stddef.h> // for size_t def
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
 
-# include "../../framework/inc/libunit.h"
-
-size_t	ft_strlen(const char *str);
-
-int	strlen_launcher(void);
-int	basic_test(void);
-// other tests
-
-#endif
+	i = 0;
+	while(str[i])
+		i++;
+	return (i);
+}

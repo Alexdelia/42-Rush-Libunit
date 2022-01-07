@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 14:37:38 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:22:04 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,19 @@ typedef struct s_unit_test
 	struct s_unit_test	*next;
 }						t_unit_test;
 
+int			launch_tests(t_unit_test **testlist);
 void		catch_process(t_unit_test *test,
 				unsigned int *ok, unsigned int *ko);
 
 void		error(t_unit_test **testlist, char *text);
 
+void		print_header(void);
+void		print_test_header(char *name);
 void		print_test_status(char *name, char *result, char *color);
 int			print_tests_result(const unsigned int ok, const unsigned int ko);
 
 t_unit_test	*testlist_new(char *name, int (*f)(void));
-void		testlist_addback(t_unit_test **alst, t_unit_test *new);
+void		testlist_addback(t_unit_test **alst, t_unit_test *n);
 void		free_testlist(t_unit_test **testlist);
 
 size_t		u_strlen(const char *str);

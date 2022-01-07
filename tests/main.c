@@ -6,24 +6,24 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 17:31:49 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:04:25 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// include
+#include "inc/tests.h"
 
 static int	launch_launchers(void)
 {
 	int	status;
 
 	status = 0;
-	status += strlen_launcher();
+	status |= strlen_launcher(); // bitwise or operator
 	// other function to test
-	return (status); // possible not to use += but || or |	 to output only 0 or 1
+	return (status);
 }
 
 int	main(void)
 {
-	// header
+	print_header();
 	return (launch_launchers());
 }
