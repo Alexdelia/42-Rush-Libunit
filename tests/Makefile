@@ -6,7 +6,7 @@
 #    By: adelille <adelille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 19:21:49 by adelille          #+#    #+#              #
-#    Updated: 2022/01/07 15:19:31 by adelille         ###   ########.fr        #
+#    Updated: 2022/01/07 15:34:14 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ RM = 	rm -rf
 
 CFLAGS =	-Wall -Werror -Wextra
 # CFLAGS +=	-O2
-# CFLAGS +=	-g
+CFLAGS +=	-g3
 # CFLAGS +=	-fsanitize=address
 
 # **************************************************************************** #
@@ -89,6 +89,7 @@ $(OBJSPATH)%.o: $(SRCSPATH)%.c
 	
 lib:
 	@printf "$(D)$(B)$(BLU)\n$(NAME) objects compiled\n\n$(D)"
+	make -C $(LBPATH)
 	#@echo "$(B)$(MAG)$(BEL)Libunit compiled.$(D)"
 
 clean:

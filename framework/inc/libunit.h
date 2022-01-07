@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:22:04 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:29:14 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_unit_test
 	struct s_unit_test	*next;
 }						t_unit_test;
 
+void		load_test(t_unit_test **testlist, char *name, int (*f)(void));
 int			launch_tests(t_unit_test **testlist);
 void		catch_process(t_unit_test *test,
 				unsigned int *ok, unsigned int *ko);

@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 14:08:51 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 14:56:07 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 15:44:41 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ void	print_test_header(char *name)
 {
 	ft_pser("\n========================================================\n\t");
 	ft_pserc(name, "\033[1;2;36m");
-	ft_pser("\n\n");
+	ft_pser("\n");
 }
 
 int	print_tests_result(const unsigned int ok, const unsigned int ko)
 {
-	ft_pser("--------------------------------------------------------\n[");
+	ft_pser("--------------------------------------------------------\n  [");
 	ft_pnerc(ok, GRN);
 	ft_pser("|");
 	ft_pnerc(ko, RED);
-	ft_pser("/");
+	ft_pser(" / ");
 	ft_pnerc(ok + ko, C_BOLD);
 	ft_pserc(" tests", C_BOLD);
 	ft_pser("]\t[");

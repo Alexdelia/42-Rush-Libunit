@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   load_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:35:41 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/07 15:29:30 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/07 15:31:49 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/tests.h"
+#include "../inc/libunit.h"
 
-int	strlen_launcher(void)
+void	load_test(t_unit_test **testlist, char *name, int (*f)(void))
 {
-	t_unit_test	*testlist;
-
-	testlist = NULL;
-	print_test_header("ft_strlen");
-	load_test(&testlist, "Basic", &basic_test);
-	// other tests
-	return (launch_tests(&testlist));
+	testlist_addback(testlist, testlist_new(name, f));
 }
