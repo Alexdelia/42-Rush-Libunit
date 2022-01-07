@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:04:20 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 21:22:14 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 21:23:15 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 // need to redirect stdout of test (might add a child process function)
 // need to add "make test" to github action/workflow
+// add more signal to catch
 
 int	launch_tests(t_unit_test **testlist)
 {
