@@ -6,7 +6,7 @@
 #    By: adelille <adelille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 19:21:49 by adelille          #+#    #+#              #
-#    Updated: 2022/01/07 15:34:14 by adelille         ###   ########.fr        #
+#    Updated: 2022/01/07 21:17:21 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,9 @@ endef
 
 all:		launch $(NAME)
 	@printf "\n$(B)$(MAG)$(NAME) compiled$(D)\n"
+
+test:		all
+	@./$(NAME)
 
 launch:
 	$(call progress_bar)
