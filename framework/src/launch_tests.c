@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:04:20 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 19:26:07 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 14:00:56 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ int	launch_tests(t_unit_test **testlist)
 	{
 		pid = fork();
 		if (pid == 0)
-			run_child(test);
+			exit(test->f());
 		else if (pid > 0)
-			run_parent(test, &ok, &ko);
+			catch_process(test, &ok, &ko);
 		else
 			error(testlist, "fork failed");
 		test = test->next;

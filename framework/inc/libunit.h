@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 19:12:37 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 14:30:59 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/wait.h>
 
 # include "color.h"
 
@@ -33,9 +34,15 @@ typedef struct s_unit_test
 
 void		error(t_unit_test **testlist, char *text);
 
+void		print_test_status(char *name, char *result, char *color);
+
 t_unit_test	*testlist_new(char *name, int (*f)(void));
 void		testlist_addback(t_unit_test **alst, t_unit_test *new);
 void		free_testlist(t_unit_test **testlist);
+
+size_t		u_strlen(const char *str);
+int			ft_abs(int n);
+void		ft_bzero(void *s, size_t n);
 
 ssize_t		ft_ps(char *str);
 ssize_t		ft_psc(char *str, char *color);
