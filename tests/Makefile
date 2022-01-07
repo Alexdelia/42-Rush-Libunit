@@ -6,7 +6,7 @@
 #    By: adelille <adelille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 19:21:49 by adelille          #+#    #+#              #
-#    Updated: 2022/01/07 21:17:21 by adelille         ###   ########.fr        #
+#    Updated: 2022/01/07 23:25:56 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,8 +43,11 @@ CLR =	$(shell tput el 1)
 # **************************************************************************** #
 #	 LIB	#
 
-LBPATH =	../framework/
-LBNAME =	$(LBPATH)libunit.a
+UNITPATH =	../framework/
+UNITNAME =	$(UNITPATH)libunit.a
+
+LIBFTPATH =	../libft/
+LIBFTNAME =	$(LIBFTPATH)libft.a
 
 # **************************************************************************** #
 #	SRCS	#
@@ -83,7 +86,7 @@ launch:
 	$(call progress_bar)
 
 $(NAME):	$(OBJS) lib
-	$(CC) $(CFLAGS) $(OBJS) $(LBNAME) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(UNITNAME) $(LIBFTNAME) -o $(NAME)
 
 $(OBJSPATH)%.o: $(SRCSPATH)%.c
 	@mkdir -p $(dir $@) # 2> /dev/null || true
@@ -92,16 +95,18 @@ $(OBJSPATH)%.o: $(SRCSPATH)%.c
 	
 lib:
 	@printf "$(D)$(B)$(BLU)\n$(NAME) objects compiled\n\n$(D)"
-	make -C $(LBPATH)
-	#@echo "$(B)$(MAG)$(BEL)Libunit compiled.$(D)"
+	make -C $(UNITPATH)
+	make -C $(LIBFTPATH)
 
 clean:
 	@$(RM) $(OBJSPATH)
-	@make clean -C $(LBPATH)
+	@make clean -C $(UNITPATH)
+	@make clean -C $(LIBFTPATH)
 
 fclean:		clean
 	@$(RM) $(NAME)
-	@make fclean -C $(LBPATH)
+	@make fclean -C $(UNITPATH)
+	@make fclean -C $(LIBFTPATH)
 
 re:			fclean all
 
