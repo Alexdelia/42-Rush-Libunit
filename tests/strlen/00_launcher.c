@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/06 17:31:18 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 14:42:11 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	strlen_launcher(void)
 {
 	t_unit_test	*testlist;
 
-	// header of test strlen
+	print_test_header("ft_strlen");
 	load_test(&testlist, "Basic", &basic_test);
 	// other tests
 	return (launch_tests(&testlist));
