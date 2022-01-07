@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 14:08:51 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 21:18:04 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 23:45:40 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,16 @@ int	print_tests_result(const unsigned int ok, const unsigned int ko)
 void	print_test_status(const char *f, const char *name,
 		const char *result, const char *color)
 {
+	int	i;
+
 	ft_psc(f, "\033[1;2;36m");
 	ft_ps(":\t");
 	ft_psc(name, C_ITALIC);
-	ft_ps(" :\t[");
+	ft_ps(" :");
+	i = u_strlen(name);
+	while (++i <= INDENT)
+		write(1, " ", 1);
+	ft_ps("[");
 	ft_psc(result, color);
 	ft_ps("]\n");
 }

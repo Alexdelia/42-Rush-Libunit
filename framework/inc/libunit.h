@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 21:07:10 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 23:48:40 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 
 # define STDOUT	1
 # define STDERR	2
+
+# define INDENT	14
 
 typedef struct s_unit_test
 {
