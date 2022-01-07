@@ -13,7 +13,6 @@
 #include "../inc/libunit.h"
 
 // need to redirect stdout of test (might add a child process function)
-// need to add "make test" to github action/workflow
 // add more signal to catch
 
 int	launch_tests(t_unit_test **testlist)
