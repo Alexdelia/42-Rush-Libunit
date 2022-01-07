@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:12:07 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/07 23:14:56 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 size_t	ft_strlen(const char *str);
 
-int	strlen_launcher(void);
-int	basic_test(void);
+int		strlen_launcher(void);
+int		basic_test(void);
 // other tests
 
 #endif
