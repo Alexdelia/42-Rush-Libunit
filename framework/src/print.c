@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 14:08:51 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 23:45:40 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:09:45 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	print_header(void)
 
 int	print_tests_result(const unsigned int ok, const unsigned int ko)
 {
-	ft_ps("\n  [");
+	ft_ps("\n   [");
 	ft_pnc(ok, GRN);
 	ft_ps("|");
 	ft_pnc(ko, RED);

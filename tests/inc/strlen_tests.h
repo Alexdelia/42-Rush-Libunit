@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 23:41:33 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 00:07:15 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		strlen_launcher(void);
 int		basic(void);
 int		null(void);
 int		segv(void);
+int		buse(void);
 // other tests
 
 #endif
