@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_buse.c                                          :+:      :+:    :+:   */
+/*   03_segv.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 00:06:30 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 11:18:26 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/strlen_tests.h"
+#include "../inc/signal_tests.h"
 
-char	*g_s = "abc";
-
-int	buse(void)
+int	segv(void)
 {
-	g_s[0] = 'd';
-	return (RET_OK);
+	int	a[42];
+
+	if (a[a[1]])
+		return (RET_OK);
+	else
+		return (RET_KO);
 }

@@ -6,19 +6,29 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 11:00:08 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 11:39:43 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/strlen_tests.h"
+#include "../inc/signal_tests.h"
 
-int	strlen_launcher(void)
+#define NAME	"SIGNAL"
+
+int	signal_launcher(void)
 {
 	t_unit_test	*testlist;
 
 	testlist = NULL;
-	load_test(&testlist, NAME, "Basic", &len_basic);
-	load_test(&testlist, NAME, "NULL", &len_null);
-	load_test(&testlist, NAME, "Segfault", &len_segv);
+	load_test(&testlist, NAME, "OK", &ok);
+	load_test(&testlist, NAME, "KO", &ko);
+	load_test(&testlist, NAME, "Segfault", &segv);
+	load_test(&testlist, NAME, "SEGV/BUSE", &sb);
+	load_test(&testlist, NAME, "Bus error", &buse);
+	load_test(&testlist, NAME, "Abort", &abrt);
+	//load_test(&testlist, NAME, "Fatal arithmetic error", &fpe);
+	load_test(&testlist, NAME, "Floating-point exception", &fl);
+	load_test(&testlist, NAME, "Pipe error", &pip);
+	load_test(&testlist, NAME, "Illegal instruction", &ill);
+	load_test(&testlist, NAME, "Unknown", &unknown);
 	return (launch_tests(&testlist));
 }

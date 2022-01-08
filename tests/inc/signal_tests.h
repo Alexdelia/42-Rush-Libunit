@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   signal_tests.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:32:02 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 11:39:09 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#ifndef SIGNAL_TESTS_H
+# define SIGNAL_TESTS_H
 
-static int	launch_launchers(void)
-{
-	int	status;
+# include "../../framework/inc/libunit.h"
+# include "../../libft/inc/libft.h"
 
-	status = 0;
-	status |= strlen_launcher();
-	status |= signal_launcher();
-	return (status);
-}
+#include <stdio.h>
+#include <sys/mman.h>
 
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
-}
+# define NAME	"SIGNAL"
+
+int		ok(void);
+int		ko(void);
+int		segv(void);
+int		sb(void);
+int		buse(void);
+int		abrt(void);
+//int		fpe(void);
+int		fl(void);
+int		pip(void);
+int		ill(void);
+int		unknown(void);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 00:07:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 10:59:49 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,8 @@
 
 # define NAME	"STRLEN"
 
-int		strlen_launcher(void);
-int		basic(void);
-int		null(void);
-int		segv(void);
-int		buse(void);
-// other tests
+int		len_basic(void);
+int		len_null(void);
+int		len_segv(void);
 
 #endif

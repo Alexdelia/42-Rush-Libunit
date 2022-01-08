@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   07_float.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:32:02 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 10:45:38 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#include "../inc/signal_tests.h"
 
-static int	launch_launchers(void)
+int	fl(void)
 {
-	int	status;
+	int		f0;
+	int		f1;
 
-	status = 0;
-	status |= strlen_launcher();
-	status |= signal_launcher();
-	return (status);
-}
-
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
+	f0 = 0;
+	f1 = 1;
+	if (f1 / f0)
+		return (RET_OK);
+	else
+		return (RET_KO);
 }

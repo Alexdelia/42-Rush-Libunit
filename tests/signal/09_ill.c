@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   09_ill.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:32:02 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 10:30:58 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#include "../inc/signal_tests.h"
 
-static int	launch_launchers(void)
+int	ill(void)
 {
-	int	status;
-
-	status = 0;
-	status |= strlen_launcher();
-	status |= signal_launcher();
-	return (status);
-}
-
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
+	if (true)
+		return (SIGILL);
+	else
+		return (RET_KO);
 }

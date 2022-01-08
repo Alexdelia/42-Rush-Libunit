@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   04_sb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:32:02 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 11:38:52 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#include "../inc/signal_tests.h"
 
-static int	launch_launchers(void)
+int	sb(void)
 {
-	int	status;
+	int	a[42];
 
-	status = 0;
-	status |= strlen_launcher();
-	status |= signal_launcher();
-	return (status);
-}
-
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
+	a[1] = INT_MAX;
+	if (a[a[1]])
+		return (RET_OK);
+	else
+		return (RET_KO);
 }
