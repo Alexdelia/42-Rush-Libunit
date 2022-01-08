@@ -6,16 +6,18 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:37:30 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:30:01 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/signal_tests.h"
 
+#include <fcntl.h>
+
 int	pip(void)
 {
-	if (true)
-		return (SIGPIPE);
+	if (raise(SIGPIPE))
+		return (RET_OK);
 	else
 		return (RET_KO);
 }

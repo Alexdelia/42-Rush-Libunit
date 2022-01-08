@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 11:44:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:29:41 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	unknown(void)
 {
-	if (true)
+	if (raise(SIGINT))
 		return (RET_OK);
 	else
 		return (RET_KO);
