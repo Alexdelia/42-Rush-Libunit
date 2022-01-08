@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen_tests.h                                     :+:      :+:    :+:   */
+/*   06_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 14:36:52 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/08 10:21:10 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 14:43:53 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRLEN_TESTS_H
-# define STRLEN_TESTS_H
+#include "../inc/atoi_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
+#include <stdio.h>
 
-# include "utils.h"
-
-# define NAME	"STRLEN"
-
-int		len_basic(void);
-int		len_long(void);
-
-#endif
+int	atoi_long(void)
+{
+	if (ft_atoi(LONG_DIGIT) == 541277425)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}

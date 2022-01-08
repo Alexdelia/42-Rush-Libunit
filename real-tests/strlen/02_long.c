@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen_tests.h                                     :+:      :+:    :+:   */
+/*   02_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 14:36:52 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 14:36:00 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRLEN_TESTS_H
-# define STRLEN_TESTS_H
+#include "../inc/strlen_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
-
-# include "utils.h"
-
-# define NAME	"STRLEN"
-
-int		len_basic(void);
-int		len_long(void);
-
-#endif
+int	len_long(void)
+{
+	if (ft_strlen(LONG_TEXT) == LONG_TEXT_LEN)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}
