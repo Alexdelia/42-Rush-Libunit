@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_segv.c                                          :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 12:18:55 by hperrin          ###   ########.fr       */
+/*   Created: 2022/01/08 10:07:14 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 12:00:46 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/signal_tests.h"
+#include "../inc/atoi_tests.h"
 
-int	segv(void)
+int	atoi_launcher(void)
 {
-	int	*a;
+	t_unit_test	*testlist;
 
-	a = NULL;
-	if (*a)
-		return (RET_OK);
-	else
-		return (RET_KO);
+	testlist = NULL;
+	load_test(&testlist, NAME, "Basic", &atoi_basic);
+	load_test(&testlist, NAME, "INT_MAX", &atoi_int_max);
+	load_test(&testlist, NAME, "INT_MIN", &atoi_int_min);
+	load_test(&testlist, NAME, "No digits", &atoi_no_digits);
+	load_test(&testlist, NAME, "Empty", &atoi_empty);
+	return (launch_tests(&testlist));
 }

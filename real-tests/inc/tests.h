@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tests.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 23:26:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 12:02:55 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../../framework/inc/libunit.h"
 # include "../../libft/inc/libft.h"
 
-# include "strlen_tests.h"
+int		atoi_launcher(void);
+int		strlen_launcher(void);
 
 #endif

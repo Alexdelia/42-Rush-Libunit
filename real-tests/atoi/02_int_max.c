@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen_tests.h                                     :+:      :+:    :+:   */
+/*   02_int_max.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 12:02:51 by hperrin          ###   ########.fr       */
+/*   Created: 2022/01/08 10:16:44 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 11:59:06 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRLEN_TESTS_H
-# define STRLEN_TESTS_H
+#include "../inc/atoi_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
-
-# define NAME	"STRLEN"
-
-int		basic(void);
-// other tests
-
-#endif
+int	atoi_int_max(void)
+{
+	if (ft_atoi("2147483647") == 2147483647)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}

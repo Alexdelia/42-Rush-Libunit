@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 15:04:25 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 12:01:57 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static int	launch_launchers(void)
 
 	status = 0;
 	status |= strlen_launcher(); // bitwise or operator
+	status |= atoi_launcher();
 	// other function to test
 	return (status);
 }

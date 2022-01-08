@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen_tests.h                                     :+:      :+:    :+:   */
+/*   01_basic.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 12:02:51 by hperrin          ###   ########.fr       */
+/*   Created: 2022/01/08 10:13:25 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 11:58:01 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRLEN_TESTS_H
-# define STRLEN_TESTS_H
+#include "../inc/atoi_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
-
-# define NAME	"STRLEN"
-
-int		basic(void);
-// other tests
-
-#endif
+int	atoi_basic(void)
+{
+	if (ft_atoi(" \t\n +11037") == 11037)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}
