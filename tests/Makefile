@@ -6,12 +6,12 @@
 #    By: adelille <adelille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 19:21:49 by adelille          #+#    #+#              #
-#    Updated: 2022/01/08 16:14:32 by adelille         ###   ########.fr        #
+#    Updated: 2022/01/08 18:35:26 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	tests
-CC = 	clang
+CC = 	cc
 AR =	ar rcs
 RM = 	rm -rf
 
