@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   05_int_min.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 14:07:56 by hperrin          ###   ########.fr       */
+/*   Created: 2022/01/08 12:55:56 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 12:57:17 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#include "../inc/is_prime_tests.h"
 
-static int	launch_launchers(void)
+int	is_prime_int_min(void)
 {
-	int	status;
-
-	status = 0;
-	status |= strlen_launcher();
-	status |= atoi_launcher();
-	status |= is_prime_launcher();
-	return (status);
-}
-
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
+	if (ft_is_prime(INT_MIN) == false)
+		return (RET_OK);
+	else
+		return (RET_KO);
 }

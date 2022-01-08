@@ -5,28 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/01/08 14:40:49 by adelille         ###   ########.fr       */
-=======
-/*   Updated: 2022/01/08 14:10:02 by hperrin          ###   ########.fr       */
->>>>>>> ec9d2849a52d56f68bb33b3ad42c0a38ed4d421f
+/*   Created: 2022/01/08 12:37:26 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 12:56:53 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/strlen_tests.h"
+#include "../inc/is_prime_tests.h"
 
-int	strlen_launcher(void)
+int	is_prime_launcher(void)
 {
 	t_unit_test	*testlist;
 
 	testlist = NULL;
-<<<<<<< HEAD
-	load_test(&testlist, NAME, "Basic", &len_basic);
-	load_test(&testlist, NAME, "1000 chars", &len_long);
-=======
-	load_test(&testlist, NAME, "Basic", &strlen_basic);
-	load_test(&testlist, NAME, "Empty", &strlen_empty);
->>>>>>> ec9d2849a52d56f68bb33b3ad42c0a38ed4d421f
+	load_test(&testlist, NAME, "Basic True", &is_prime_basic_true);
+	load_test(&testlist, NAME, "Basic False", &is_prime_basic_false);
+	load_test(&testlist, NAME, "Zero", &is_prime_zero);
+	load_test(&testlist, NAME, "INT_MAX", &is_prime_int_max);
+	load_test(&testlist, NAME, "INT_MIN", &is_prime_int_min);
 	return (launch_tests(&testlist));
 }

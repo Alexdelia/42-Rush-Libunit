@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   02_basic_false.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 14:07:56 by hperrin          ###   ########.fr       */
+/*   Created: 2022/01/08 12:45:50 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 12:50:59 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#include "../inc/is_prime_tests.h"
 
-static int	launch_launchers(void)
+int	is_prime_basic_false(void)
 {
-	int	status;
-
-	status = 0;
-	status |= strlen_launcher();
-	status |= atoi_launcher();
-	status |= is_prime_launcher();
-	return (status);
-}
-
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
+	if (ft_is_prime(35) == false)
+		return (RET_OK);
+	else
+		return (RET_KO);
 }
