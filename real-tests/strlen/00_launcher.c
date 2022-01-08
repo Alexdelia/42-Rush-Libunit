@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 23:54:37 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:34:56 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ int	strlen_launcher(void)
 
 	testlist = NULL;
 	load_test(&testlist, NAME, "Basic", &basic);
-	// other tests
 	return (launch_tests(&testlist));
 }

@@ -6,7 +6,7 @@
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 12:01:57 by hperrin          ###   ########.fr       */
+/*   Updated: 2022/01/08 13:34:49 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ static int	launch_launchers(void)
 	int	status;
 
 	status = 0;
-	status |= strlen_launcher(); // bitwise or operator
+	status |= strlen_launcher();
 	status |= atoi_launcher();
-	// other function to test
 	return (status);
 }
 

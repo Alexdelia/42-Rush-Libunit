@@ -6,19 +6,16 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:04:20 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 21:23:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:34:27 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libunit.h"
 
-// need to redirect stdout of test (might add a child process function)
-// add more signal to catch
-
 int	launch_tests(t_unit_test **testlist)
 {
-	unsigned int	ok; // number of tests that return OK
-	unsigned int	ko; // number of tests that return something else than OK
+	unsigned int	ok;
+	unsigned int	ko;
 	t_unit_test		*test;
 	pid_t			pid;
 

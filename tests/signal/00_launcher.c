@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 11:39:43 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:33:47 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	signal_launcher(void)
 	load_test(&testlist, NAME, "SEGV/BUSE", &sb);
 	load_test(&testlist, NAME, "Bus error", &buse);
 	load_test(&testlist, NAME, "Abort", &abrt);
-	//load_test(&testlist, NAME, "Fatal arithmetic error", &fpe);
 	load_test(&testlist, NAME, "Floating-point exception", &fl);
 	load_test(&testlist, NAME, "Pipe error", &pip);
 	load_test(&testlist, NAME, "Illegal instruction", &ill);
