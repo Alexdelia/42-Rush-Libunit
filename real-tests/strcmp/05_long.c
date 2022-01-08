@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   05_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 21:18:00 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 21:23:57 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#include "../inc/strcmp_tests.h"
 
-static int	launch_launchers(void)
+int	strcmp_long(void)
 {
-	int	status;
-
-	status = 0;
-	status |= strlen_launcher();
-	status |= nbrlen_launcher();
-	status |= atoi_launcher();
-	status |= strcmp_launcher();
-	status |= is_prime_launcher();
-	return (status);
-}
-
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
+	if (ft_strcmp(LONG_TEXT, LONG_TEXT) == 0)
+		return (RET_OK);
+	else
+		return (RET_KO);
 }

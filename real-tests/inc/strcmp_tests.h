@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   strcmp_tests.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 21:18:00 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 21:19:48 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/tests.h"
+#ifndef STRCMP_TESTS_H
+# define STRCMP_TESTS_H
 
-static int	launch_launchers(void)
-{
-	int	status;
+# include "../../framework/inc/libunit.h"
+# include "../../libft/inc/libft.h"
 
-	status = 0;
-	status |= strlen_launcher();
-	status |= nbrlen_launcher();
-	status |= atoi_launcher();
-	status |= strcmp_launcher();
-	status |= is_prime_launcher();
-	return (status);
-}
+# include <string.h>
 
-int	main(void)
-{
-	print_header();
-	return (launch_launchers());
-}
+# include "utils.h"
+
+# define NAME	"STRCMP"
+
+int		strcmp_basic(void);
+int		strcmp_diff(void);
+int		strcmp_complex(void);
+int		strcmp_long(void);
+int		strcmp_space(void);
+int		strcmp_empty(void);
+
+#endif
