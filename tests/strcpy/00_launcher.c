@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.h                                            :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 13:41:57 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 13:40:42 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTS_H
-# define TESTS_H
+#include "../inc/strcpy_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
+int	strcpy_launcher(void)
+{
+	t_unit_test	*testlist;
 
-//# include "strlen_tests.h"
-//# include "signal_tests.h"
-
-int		signal_launcher(void);
-int		strlen_launcher(void);
-int		strcpy_launcher(void);
-
-#endif
+	testlist = NULL;
+	load_test(&testlist, NAME, "Basic", &cpy_basic);
+	load_test(&testlist, NAME, "NULL", &cpy_null);
+	load_test(&testlist, NAME, "Empty", &cpy_empty);
+	return (launch_tests(&testlist));
+}

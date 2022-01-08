@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:32:02 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:41:44 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ static int	launch_launchers(void)
 	int	status;
 
 	status = 0;
-	status |= strlen_launcher();
 	status |= signal_launcher();
+	status |= strlen_launcher();
+	status |= strcpy_launcher();
 	return (status);
 }
 

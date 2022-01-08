@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.h                                            :+:      :+:    :+:   */
+/*   01_basic.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 13:41:57 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 13:40:27 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTS_H
-# define TESTS_H
+#include "../inc/strlen_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
+int	cpy_basic(void)
+{
+	char	a[42];
 
-//# include "strlen_tests.h"
-//# include "signal_tests.h"
-
-int		signal_launcher(void);
-int		strlen_launcher(void);
-int		strcpy_launcher(void);
-
-#endif
+	if (ft_strcpy(a, "Hello") == 5)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}
