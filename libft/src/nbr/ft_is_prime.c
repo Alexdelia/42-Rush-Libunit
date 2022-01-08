@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:02:12 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 23:22:42 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 14:58:30 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ bool	ft_is_prime(int n)
 {
 	int	div;
 
-	if (n == 2 || n == 3)
+	if (n == 2 || n == 3 || n == INT_MAX)
 		return (true);
 	if (n <= 1 || n % 2 == 0 || n % 3 == 0)
 		return (false);
