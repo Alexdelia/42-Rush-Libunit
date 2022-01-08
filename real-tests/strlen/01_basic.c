@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   01_basic.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/07 23:38:08 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 14:09:43 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/strlen_tests.h"
 
-int	basic(void)
+int	strlen_basic(void)
 {
 	if (ft_strlen("Hello") == 5)
 		return (RET_OK);

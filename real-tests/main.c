@@ -6,7 +6,7 @@
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:59:08 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 13:34:49 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 14:07:56 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static int	launch_launchers(void)
 	status = 0;
 	status |= strlen_launcher();
 	status |= atoi_launcher();
+	status |= is_prime_launcher();
 	return (status);
 }
 

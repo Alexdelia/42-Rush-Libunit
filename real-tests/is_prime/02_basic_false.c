@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen_tests.h                                     :+:      :+:    :+:   */
+/*   02_basic_false.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 14:09:22 by hperrin          ###   ########.fr       */
+/*   Created: 2022/01/08 12:45:50 by hperrin           #+#    #+#             */
+/*   Updated: 2022/01/08 12:50:59 by hperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRLEN_TESTS_H
-# define STRLEN_TESTS_H
+#include "../inc/is_prime_tests.h"
 
-# include "../../framework/inc/libunit.h"
-# include "../../libft/inc/libft.h"
-
-# define NAME	"STRLEN"
-
-int		strlen_basic(void);
-int		strlen_empty(void);
-
-#endif
+int	is_prime_basic_false(void)
+{
+	if (ft_is_prime(35) == false)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}
