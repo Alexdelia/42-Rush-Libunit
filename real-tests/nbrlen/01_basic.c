@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   01_basic.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 15:43:27 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 15:43:10 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "../inc/nbrlen_tests.h"
 
-# define LONG_TEXT	"Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-# define LONG_TEXT_LEN	57
-# define LONG_DIGIT	"717598764982305202223464659490019097706618700281981101642"
-# define OVERFLOW_VALUE	-1588402614
-
-#endif
+int	nbrlen_basic(void)
+{
+	if (ft_nbrlen(42) == 2)
+		return (RET_OK);
+	else
+		return (RET_KO);
+}

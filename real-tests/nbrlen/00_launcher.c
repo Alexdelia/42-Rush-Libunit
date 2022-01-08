@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hperrin <hperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 15:43:27 by adelille         ###   ########.fr       */
+/*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
+/*   Updated: 2022/01/08 15:47:32 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "../inc/nbrlen_tests.h"
 
-# define LONG_TEXT	"Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-# define LONG_TEXT_LEN	57
-# define LONG_DIGIT	"717598764982305202223464659490019097706618700281981101642"
-# define OVERFLOW_VALUE	-1588402614
+int	nbrlen_launcher(void)
+{
+	t_unit_test	*testlist;
 
-#endif
+	testlist = NULL;
+	load_test(&testlist, NAME, "Basic", &nbrlen_basic);
+	load_test(&testlist, NAME, "Negative", &nbrlen_negative);
+	load_test(&testlist, NAME, "INT_MAX", &nbrlen_int_max);
+	load_test(&testlist, NAME, "INT_MIN", &nbrlen_int_min);
+	return (launch_tests(&testlist));
+}
