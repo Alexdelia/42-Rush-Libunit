@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:14:44 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 18:42:23 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 19:04:39 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	signal_launcher(void)
 	load_test(&testlist, NAME, "Floating-point exception", &fl);
 	load_test(&testlist, NAME, "Pipe error", &pip);
 	load_test(&testlist, NAME, "Illegal instruction", &ill);
+	load_test(&testlist, NAME, "TIMEOUT", &timeout);
 	load_test(&testlist, NAME, "Unknown", &unknown);
 	load_test(&testlist, NAME, "Unknown 2", &unknown2);
 	return (launch_tests(&testlist));

@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 16:42:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:54:57 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 19:03:45 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 # define RET_OK	0
 # define RET_KO	-1
+
+# define TIMEOUT_SECOND	1
 
 # define STDOUT	1
 # define STDERR	2

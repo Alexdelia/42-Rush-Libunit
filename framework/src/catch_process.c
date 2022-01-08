@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:58:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 18:44:22 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 18:48:04 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	print_basic(t_unit_test *test, const int status)
 	if (WEXITSTATUS(status) == 0)
 		print_test_status(test->name, test->f_name, "OK", GRN);
 	else if (WEXITSTATUS(status) == SIGALRM)
-		print_test_status(test->name, test->f_name, "TIMEOUT", C_YELLOW);
+		print_test_status(test->name, test->f_name, "TIMEOUT", "\033[1;3;33m");
 	else
 		print_test_status(test->name, test->f_name, "KO", RED);
 }

@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 18:42:10 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 19:00:54 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int		pip(void);
 int		ill(void);
 int		unknown(void);
 int		unknown2(void);
+int		timeout(void);
 
 #endif
