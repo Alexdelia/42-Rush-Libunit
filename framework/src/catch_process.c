@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:58:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:53:50 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 11:53:49 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ static void	print_basic(t_unit_test *test, const int status)
 static void	print_signal(t_unit_test *test, const int status)
 {
 	if (WTERMSIG(status) == SIGSEGV)
-		print_test_status(test->name, test->f_name, "SIGSEGV", "\033[1;5;31m");
+		print_test_status(test->name, test->f_name, "SIGSEGV", "\033[1;5;7;31m");
 	else if (WTERMSIG(status) == SIGBUS)
-		print_test_status(test->name, test->f_name, "SIGBUS", C_MAGENTA);
+		print_test_status(test->name, test->f_name, "SIGBUS", "\033[1;5;7;33m");
 	else if (WTERMSIG(status) == SIGABRT)
 		print_test_status(test->name, test->f_name, "SIGABRT", C_BLUE);
 	else if (WTERMSIG(status) == SIGFPE)
