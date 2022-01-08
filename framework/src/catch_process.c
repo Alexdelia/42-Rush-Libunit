@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:58:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 11:53:49 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 11:56:02 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ static void	print_signal(t_unit_test *test, const int status)
 	else if (WTERMSIG(status) == SIGBUS)
 		print_test_status(test->name, test->f_name, "SIGBUS", "\033[1;5;7;33m");
 	else if (WTERMSIG(status) == SIGABRT)
-		print_test_status(test->name, test->f_name, "SIGABRT", C_BLUE);
+		print_test_status(test->name, test->f_name, "SIGABRT", "\033[1;34m");
 	else if (WTERMSIG(status) == SIGFPE)
-		print_test_status(test->name, test->f_name, "SIGFPE", "\033[1;5;34m");
+		print_test_status(test->name, test->f_name, "SIGFPE", "\033[1;35m");
 	else if (WTERMSIG(status) == SIGPIPE)
 		print_test_status(test->name, test->f_name, "SIGPIPE", "\033[90m");
 	else if (WTERMSIG(status) == SIGILL)
