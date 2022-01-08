@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 11:39:09 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 11:49:03 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include "../../framework/inc/libunit.h"
 # include "../../libft/inc/libft.h"
 
-#include <stdio.h>
-#include <sys/mman.h>
+# include <stdio.h>
+# include <sys/mman.h>
 
 # define NAME	"SIGNAL"
 

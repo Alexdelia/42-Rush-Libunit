@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:23:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 11:40:46 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 11:48:21 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	buse(void)
 {
-    FILE *f;
-    int *m;
+	FILE	*f;
+	int		*m;
 
 	f = tmpfile();
 	m = mmap(0, 4, PROT_WRITE, MAP_PRIVATE, fileno(f), 0);
-    if (*m)
+	if (*m)
 		return (RET_OK);
 	else
 		return (RET_KO);
