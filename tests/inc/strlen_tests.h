@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 17:18:45 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/08 10:59:49 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/08 18:39:03 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # define NAME	"STRLEN"
 
 int		len_basic(void);
+int		len_ko(void);
 int		len_null(void);
 int		len_segv(void);
 
